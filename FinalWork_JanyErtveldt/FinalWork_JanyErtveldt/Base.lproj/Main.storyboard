@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="1919.2" y="26.53673163418291"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="dc6-n5-v6c">
             <objects>
-                <viewController id="im0-Bd-acz" sceneMemberID="viewController">
+                <viewController id="im0-Bd-acz" customClass="LoginController" customModule="FinalWork_JanyErtveldt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b0T-19-YS5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,6 +83,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRI-BI-zyl">
+                                <rect key="frame" x="160" y="210" width="55" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nbm-nG-5T2"/>
