@@ -13,8 +13,16 @@ import FirebaseDatabase
 
 
 class LoginController: UIViewController {
+    @IBOutlet weak var testQRcodeLabel: UILabel!
+    var testQRcodeScan = String("")
+
+    
     override func viewDidLoad(){
         super.viewDidLoad()
+         self.navigationController?.navigationBar.isHidden = false
+        
+       
+        
     }
     
     @IBAction func btnLogOut(_ sender: UIButton) {

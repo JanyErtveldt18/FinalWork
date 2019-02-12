@@ -18,6 +18,8 @@
 		DF7863B021E7817C00FC53EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7863AE21E7817C00FC53EF /* LaunchScreen.storyboard */; };
 		DF7863BB21E7817C00FC53EF /* FinalWork_JanyErtveldtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863BA21E7817C00FC53EF /* FinalWork_JanyErtveldtTests.swift */; };
 		DF7863C621E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863C521E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift */; };
+		DFBB090E2212E3DB0091CC4D /* KaartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */; };
+		DFECCA4C22108C9C00B71E22 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */; };
 		DFF9F5E221ECF04900AB193F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFF9F5E121ECF04900AB193F /* GoogleService-Info.plist */; };
 		DFF9F5E621ED01EC00AB193F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF9F5E521ED01EC00AB193F /* LoginController.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		DF7863C121E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalWork_JanyErtveldtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7863C521E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalWork_JanyErtveldtUITests.swift; sourceTree = "<group>"; };
 		DF7863C721E7817C00FC53EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaartViewController.swift; sourceTree = "<group>"; };
+		DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		DFF9F5E121ECF04900AB193F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Documents/FINAL WORK/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DFF9F5E521ED01EC00AB193F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,8 +149,10 @@
 			children = (
 				DF7863A221E7817A00FC53EF /* AppDelegate.swift */,
 				DF7863A421E7817A00FC53EF /* ViewController.swift */,
-				DF7863A621E7817A00FC53EF /* Main.storyboard */,
+				DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */,
+				DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */,
 				DFF9F5E521ED01EC00AB193F /* LoginController.swift */,
+				DF7863A621E7817A00FC53EF /* Main.storyboard */,
 				DF7863AC21E7817C00FC53EF /* Assets.xcassets */,
 				DF7863AE21E7817C00FC53EF /* LaunchScreen.storyboard */,
 				DF7863B121E7817C00FC53EF /* Info.plist */,
@@ -393,7 +399,9 @@
 			files = (
 				DF7863AB21E7817A00FC53EF /* FinalWork_JanyErtveldt.xcdatamodeld in Sources */,
 				DFF9F5E621ED01EC00AB193F /* LoginController.swift in Sources */,
+				DFECCA4C22108C9C00B71E22 /* QRReaderViewController.swift in Sources */,
 				DF7863A521E7817A00FC53EF /* ViewController.swift in Sources */,
+				DFBB090E2212E3DB0091CC4D /* KaartViewController.swift in Sources */,
 				DF7863A321E7817A00FC53EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +579,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8722L26BP5;
 				INFOPLIST_FILE = FinalWork_JanyErtveldt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -589,6 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8722L26BP5;
 				INFOPLIST_FILE = FinalWork_JanyErtveldt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
