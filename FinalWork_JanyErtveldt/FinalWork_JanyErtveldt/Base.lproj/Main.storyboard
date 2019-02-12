@@ -112,7 +112,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kaart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLs-1K-TOw">
-                                <rect key="frame" x="166" y="121" width="41" height="21"/>
+                                <rect key="frame" x="38" y="120" width="299" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -122,10 +122,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dg7-LN-oem"/>
                     </view>
+                    <connections>
+                        <outlet property="lblMeegekregenQRcode" destination="tLs-1K-TOw" id="LeG-Uq-Lkv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3Q-Sj-7nB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4934" y="27"/>
+            <point key="canvasLocation" x="4933.6000000000004" y="26.53673163418291"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="dc6-n5-v6c">
@@ -197,7 +200,6 @@
         <!--Navigation Controller-->
         <scene sceneID="G37-ZN-QmY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GbD-dU-X6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ndv-Rn-YDF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RTN-bi-dw0">
@@ -211,6 +213,7 @@
                         <segue destination="im0-Bd-acz" kind="relationship" relationship="rootViewController" id="BnD-E2-R7c"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GbD-dU-X6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1919" y="768"/>
         </scene>

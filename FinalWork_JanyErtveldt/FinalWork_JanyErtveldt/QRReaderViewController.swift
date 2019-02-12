@@ -65,7 +65,7 @@ class QRReaderViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
                 let machineReadableCode = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
                 if object.type == AVMetadataObject.ObjectType.qr
                 {
-                    
+                    stringWaarde = machineReadableCode.stringValue!
                     let alert = UIAlertController(title: "QR-code gescand", message: "Toon route naar ouders", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Scan opnieuw", style: .default, handler: nil))
                     
@@ -73,6 +73,7 @@ class QRReaderViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
                         //The (withIdentifier: "VC2") is the Storyboard Segue identifier.
                         //self.performSegue(withIdentifier: "Kaart", sender: self)
                         let KaartViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Kaart") as! KaartViewController
+                        KaartViewController.meegekregenCode = self.stringWaarde
                         self.present(KaartViewController, animated: true, completion: nil)
                     })
                     alert.addAction(openKaart)
@@ -103,7 +104,7 @@ class QRReaderViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
                     present(alert,animated: true,completion: nil)
                     
                 
-                    stringWaarde = machineReadableCode.stringValue!
+                    
 //                    performSegue(withIdentifier: "Homesceen", sender: self)
                     print(stringWaarde)
                 }

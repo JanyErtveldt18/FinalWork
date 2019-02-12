@@ -9,10 +9,13 @@
 import UIKit
 
 class KaartViewController: UIViewController {
-
+    @IBOutlet weak var lblMeegekregenQRcode: UILabel!
+    
+    var meegekregenCode = String("")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        lblMeegekregenQRcode.text = meegekregenCode
         // Do any additional setup after loading the view.
     }
     
