@@ -17,7 +17,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
     
         self.txtEmail.delegate = self
-        self.navigationController?.navigationBar.isHidden = true;
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
