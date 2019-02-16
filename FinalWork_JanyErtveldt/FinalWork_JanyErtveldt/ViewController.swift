@@ -17,7 +17,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
     
         self.txtEmail.delegate = self
-        self.navigationController?.navigationBar.isHidden = true
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -36,6 +36,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
             Auth.auth().signIn(withEmail: emailAdress, password: password){ user, error in
                 if error == nil && user != nil{
                     print("User ingelogd")
+                    
                     self.loginUser()
                 }else{
                     print("User niet ingelogd")
@@ -48,13 +49,10 @@ class ViewController: UIViewController,UITextFieldDelegate {
     
     func loginUser(){
         print("Stuur user door naar homescreen")
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Homesceen") as! LoginController
-//        self.present(vc,animated: true,completion: nil)
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Homesceen") as! LoginController
-        navigationController?.pushViewController(vc, animated: true)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfielViewControllerID") as! UITabBarController
+        self.present(vc, animated: true, completion: nil)
     }
     
 
 
 }
-

@@ -9,13 +9,15 @@
 import UIKit
 import Foundation
 import AVFoundation
+import MapKit
 
 class QRReaderViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var ScanVierkant: UIImageView!
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
     var video = AVCaptureVideoPreviewLayer()
     var stringWaarde = String()
-    
+    var menuShowing = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,6 +59,11 @@ class QRReaderViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
 
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = "QR-SCANNER"
+    }
+    
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if metadataObjects != nil && metadataObjects.count != 0
         {
@@ -65,14 +72,33 @@ class QRReaderViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
                 let machineReadableCode = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
                 if object.type == AVMetadataObject.ObjectType.qr
                 {
-                    
+                    stringWaarde = machineReadableCode.stringValue!
                     let alert = UIAlertController(title: "QR-code gescand", message: "Toon route naar ouders", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Scan opnieuw", style: .default, handler: nil))
                     
                     let openKaart = UIAlertAction(title: "Toon route", style: .default, handler: {(action) -> Void in
-                        //The (withIdentifier: "VC2") is the Storyboard Segue identifier.
-                        //self.performSegue(withIdentifier: "Kaart", sender: self)
+                        
                         let KaartViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Kaart") as! KaartViewController
+//                        KaartViewController.meegekregenCode = self.stringWaarde
+                        
+                        //opent app maps op iPhone dus gaat uit de applicatie
+                        //Eindpunt locatie
+//                        let latitude: CLLocationDegrees = 50.872667
+//                        let longitude: CLLocationDegrees = 4.248144
+//
+//                        let regionDistance: CLLocationDistance = 1000
+//                        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+//                        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+//
+//                        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),MKLaunchOptionsMapSpanKey:NSValue(mkCoordinateSpan: regionSpan.span)]
+//
+//                        let placemark = MKPlacemark(coordinate: coordinates)
+//                        let mapItem = MKMapItem(placemark: placemark)
+//                        mapItem.name = "Locatie kind"
+//                        mapItem.openInMaps(launchOptions: options)
+                        
+                        
+                        
                         self.present(KaartViewController, animated: true, completion: nil)
                     })
                     alert.addAction(openKaart)
@@ -103,7 +129,7 @@ class QRReaderViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
                     present(alert,animated: true,completion: nil)
                     
                 
-                    stringWaarde = machineReadableCode.stringValue!
+                    
 //                    performSegue(withIdentifier: "Homesceen", sender: self)
                     print(stringWaarde)
                 }
@@ -114,7 +140,10 @@ class QRReaderViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Homesceen" {
             let destination = segue.destination as! LoginController
-            destination.testQRcodeScan = stringWaarde
+            
         }
     }
+    
+    
+   
 }

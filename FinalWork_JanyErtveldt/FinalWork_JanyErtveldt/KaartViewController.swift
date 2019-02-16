@@ -7,13 +7,40 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class KaartViewController: UIViewController {
-
+class KaartViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
+    
+    //Map
+    @IBOutlet weak var map: MKMapView!
+    var locationManager = CLLocationManager()
+    
+    var latitudeUser = String("")
+    var longitudeUser = String("")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.startUpdatingLocation()
+        }
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func mapView(_ mapview: MKMapView, didUpdate userLocation: MKUserLocation){
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let center = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center,span: span)
+        mapview.setRegion(region,animated: true)
+        self.map.showsUserLocation = true
+        
+        latitudeUser = "\(userLocation.coordinate.latitude)"
+        longitudeUser = "\(userLocation.coordinate.longitude)"
+        print("LatitudeUser: " + latitudeUser)
+        print("LongitudeUser: " + longitudeUser)
     }
     
 
