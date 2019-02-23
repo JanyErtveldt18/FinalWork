@@ -10,6 +10,7 @@
 		2B576C446BBAA3D51C02CE45 /* Pods_FinalWork_JanyErtveldtTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1C459CFD6D5B76B87D7C59 /* Pods_FinalWork_JanyErtveldtTests.framework */; };
 		CED262CBF3DDFAE03DFFD5FD /* Pods_FinalWork_JanyErtveldtUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF05040425D3BC2C2B712A76 /* Pods_FinalWork_JanyErtveldtUITests.framework */; };
 		D10EFF4986BFB5C864763878 /* Pods_FinalWork_JanyErtveldt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8513971DAA991F31CD77BCB7 /* Pods_FinalWork_JanyErtveldt.framework */; };
+		DF1824F5221C6A950069BB2A /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1824F4221C6A950069BB2A /* Kind.swift */; };
 		DF7863A321E7817A00FC53EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863A221E7817A00FC53EF /* AppDelegate.swift */; };
 		DF7863A521E7817A00FC53EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863A421E7817A00FC53EF /* ViewController.swift */; };
 		DF7863A821E7817A00FC53EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7863A621E7817A00FC53EF /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 		DF7863B021E7817C00FC53EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7863AE21E7817C00FC53EF /* LaunchScreen.storyboard */; };
 		DF7863BB21E7817C00FC53EF /* FinalWork_JanyErtveldtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863BA21E7817C00FC53EF /* FinalWork_JanyErtveldtTests.swift */; };
 		DF7863C621E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863C521E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift */; };
+		DF97ACF12221B744003DC4A2 /* NoodnummersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97ACF02221B744003DC4A2 /* NoodnummersViewController.swift */; };
 		DF9FC84E22182127005EE873 /* LocationSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FC84D22182127005EE873 /* LocationSingleton.swift */; };
 		DFBB090E2212E3DB0091CC4D /* KaartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */; };
 		DFECCA4C22108C9C00B71E22 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */; };
@@ -52,6 +54,7 @@
 		DE1C459CFD6D5B76B87D7C59 /* Pods_FinalWork_JanyErtveldtTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalWork_JanyErtveldtTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE843A2111A258B13EF3C764 /* Pods-FinalWork_JanyErtveldt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalWork_JanyErtveldt.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalWork_JanyErtveldt/Pods-FinalWork_JanyErtveldt.release.xcconfig"; sourceTree = "<group>"; };
 		DF05040425D3BC2C2B712A76 /* Pods_FinalWork_JanyErtveldtUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalWork_JanyErtveldtUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF1824F4221C6A950069BB2A /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
 		DF78639F21E7817A00FC53EF /* FinalWork_JanyErtveldt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalWork_JanyErtveldt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7863A221E7817A00FC53EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF7863A421E7817A00FC53EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		DF7863C121E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalWork_JanyErtveldtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7863C521E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalWork_JanyErtveldtUITests.swift; sourceTree = "<group>"; };
 		DF7863C721E7817C00FC53EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF97ACF02221B744003DC4A2 /* NoodnummersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoodnummersViewController.swift; sourceTree = "<group>"; };
 		DF9FC84D22182127005EE873 /* LocationSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSingleton.swift; sourceTree = "<group>"; };
 		DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaartViewController.swift; sourceTree = "<group>"; };
 		DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
@@ -154,8 +158,10 @@
 				DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */,
 				DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */,
 				DFF9F5E521ED01EC00AB193F /* LoginController.swift */,
+				DF1824F4221C6A950069BB2A /* Kind.swift */,
 				DF9FC84D22182127005EE873 /* LocationSingleton.swift */,
 				DF7863A621E7817A00FC53EF /* Main.storyboard */,
+				DF97ACF02221B744003DC4A2 /* NoodnummersViewController.swift */,
 				DF7863AC21E7817C00FC53EF /* Assets.xcassets */,
 				DF7863AE21E7817C00FC53EF /* LaunchScreen.storyboard */,
 				DF7863B121E7817C00FC53EF /* Info.plist */,
@@ -381,15 +387,27 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FinalWork_JanyErtveldt/Pods-FinalWork_JanyErtveldt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -406,8 +424,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF7863AB21E7817A00FC53EF /* FinalWork_JanyErtveldt.xcdatamodeld in Sources */,
+				DF97ACF12221B744003DC4A2 /* NoodnummersViewController.swift in Sources */,
 				DFF9F5E621ED01EC00AB193F /* LoginController.swift in Sources */,
 				DFECCA4C22108C9C00B71E22 /* QRReaderViewController.swift in Sources */,
+				DF1824F5221C6A950069BB2A /* Kind.swift in Sources */,
 				DF9FC84E22182127005EE873 /* LocationSingleton.swift in Sources */,
 				DF7863A521E7817A00FC53EF /* ViewController.swift in Sources */,
 				DFBB090E2212E3DB0091CC4D /* KaartViewController.swift in Sources */,

@@ -219,14 +219,70 @@
         <!--NOODNUMMERS-->
         <scene sceneID="bJ5-3H-VrC">
             <objects>
-                <viewController id="Qej-DT-e7T" sceneMemberID="viewController">
+                <viewController id="Qej-DT-e7T" customClass="NoodnummersViewController" customModule="FinalWork_JanyErtveldt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kUl-pu-LKR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ep7-HP-X2H">
+                                <rect key="frame" x="37" y="113" width="300" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91764705882352937" green="0.92156862745098034" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Politie - 101">
+                                    <color key="titleColor" red="0.91764705879999997" green="0.33333333329999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="MakeACallTo101:" destination="Qej-DT-e7T" eventType="touchUpInside" id="CeQ-hm-YGV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8A-Ci-QZS">
+                                <rect key="frame" x="37" y="199" width="300" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.92156862750000001" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Brandweer - 112">
+                                    <color key="titleColor" red="0.91764705879999997" green="0.33333333329999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="MakeACallToBrandweer:" destination="Qej-DT-e7T" eventType="touchUpInside" id="HCB-At-DkV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyl-t4-MCv">
+                                <rect key="frame" x="37" y="286" width="300" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.92156862750000001" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Algemeen - 112">
+                                    <color key="titleColor" red="0.91764705879999997" green="0.33333333329999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="MakeACallToAlgemeen:" destination="Qej-DT-e7T" eventType="touchUpInside" id="K1v-Ei-vHN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ab-8e-cD5">
+                                <rect key="frame" x="37" y="373" width="300" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.92156862750000001" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Child Focus - 02 475 44 11">
+                                    <color key="titleColor" red="0.91764705879999997" green="0.33333333329999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="MakeACallToChildFocus:" destination="Qej-DT-e7T" eventType="touchUpInside" id="vBI-Oq-jtl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3EF-6v-Fxe"/>
                     </view>
                     <navigationItem key="navigationItem" title="NOODNUMMERS" id="k5B-4b-KLi"/>
+                    <connections>
+                        <outlet property="btn101" destination="Ep7-HP-X2H" id="eMp-Nt-vcM"/>
+                        <outlet property="btnAlgemeen" destination="Tyl-t4-MCv" id="hej-yR-TaM"/>
+                        <outlet property="btnBrandweer" destination="f8A-Ci-QZS" id="RSp-lL-oFI"/>
+                        <outlet property="btnChildFocus" destination="7ab-8e-cD5" id="cZT-Ly-AZq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3x8-pp-wqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
