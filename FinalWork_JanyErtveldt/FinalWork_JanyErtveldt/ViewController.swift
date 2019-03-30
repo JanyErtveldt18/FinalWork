@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var txtEmail: UITextField!
@@ -36,6 +38,17 @@ class ViewController: UIViewController,UITextFieldDelegate {
             Auth.auth().signIn(withEmail: emailAdress, password: password){ user, error in
                 if error == nil && user != nil{
                     print("User ingelogd")
+                    print((Auth.auth().currentUser?.uid)!)
+                    let userId = (Auth.auth().currentUser?.uid)!
+                    
+//                    var dict : [String : Any] = ["userid" : userId]
+//                   // LocationSingleton.sharedInstance
+//                    let db = Firestore.firestore()
+//                    let settings = db.settings
+//                    settings.areTimestampsInSnapshotsEnabled = true
+//                    db.settings = settings
+//                    //db.collection("Users").addDocument(data: dict)
+//                    db.collection("Users").document(userId).setData(dict)
                     
                     self.loginUser()
                 }else{

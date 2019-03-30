@@ -15,17 +15,19 @@ class Kind {
     var naamKind: String?
     var voornaamKind: String?
     var beschrijving: String?
+    var relatie: String?
     var leeftijd: Int?
-    //var url: String?
+    var url: String?
     
-    init(id:String?, naamOuder: String?, voornaamOuder: String?, naamKind: String?, voornaamKind: String?, beschrijving: String?,leeftijd: Int?){
+    init(id:String?, naamOuder: String?, voornaamOuder: String?,relatie: String?, naamKind: String?, voornaamKind: String?, beschrijving: String?,leeftijd: Int?,url: String?){
         self.id = id
         self.voornaamOuder = voornaamOuder
         self.naamOuder = naamOuder
         self.voornaamKind = voornaamKind
         self.naamKind = naamKind
         self.beschrijving = beschrijving
+        self.relatie = relatie
         self.leeftijd = leeftijd
-        //self.url = url
+        self.url = url
     }
 }

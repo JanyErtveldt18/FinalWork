@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class KaartViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
     
@@ -19,6 +20,11 @@ class KaartViewController: UIViewController,MKMapViewDelegate,CLLocationManagerD
     var latitudeUser = String("")
     var longitudeUser = String("")
     
+    //API, dataset van alle politiekantoren
+    //https://opendata.brussel.be/explore/dataset/politiekantoren/api/
+    let url = URL(string: "https://api.jcdecaux.com/vls/v1/stations?apiKey=6d5071ed0d0b3b68462ad73df43fd9e5479b03d6&contract=Bruxelles-Capitale")
+    let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
@@ -27,7 +33,12 @@ class KaartViewController: UIViewController,MKMapViewDelegate,CLLocationManagerD
         }
         
         
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     func mapView(_ mapview: MKMapView, didUpdate userLocation: MKUserLocation){
@@ -39,8 +50,8 @@ class KaartViewController: UIViewController,MKMapViewDelegate,CLLocationManagerD
         
         latitudeUser = "\(userLocation.coordinate.latitude)"
         longitudeUser = "\(userLocation.coordinate.longitude)"
-        print("LatitudeUser: " + latitudeUser)
-        print("LongitudeUser: " + longitudeUser)
+        //print("LatitudeUser: " + latitudeUser)
+        //print("LongitudeUser: " + longitudeUser)
     }
     
 

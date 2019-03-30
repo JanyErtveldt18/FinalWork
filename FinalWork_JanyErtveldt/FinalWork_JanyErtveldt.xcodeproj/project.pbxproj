@@ -20,9 +20,11 @@
 		DF7863BB21E7817C00FC53EF /* FinalWork_JanyErtveldtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863BA21E7817C00FC53EF /* FinalWork_JanyErtveldtTests.swift */; };
 		DF7863C621E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863C521E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift */; };
 		DF97ACF12221B744003DC4A2 /* NoodnummersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97ACF02221B744003DC4A2 /* NoodnummersViewController.swift */; };
-		DF9FC84E22182127005EE873 /* LocationSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FC84D22182127005EE873 /* LocationSingleton.swift */; };
 		DFBB090E2212E3DB0091CC4D /* KaartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */; };
+		DFDD39C82237D08D00505B0D /* LocationSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD39C72237D08D00505B0D /* LocationSingleton.swift */; };
 		DFECCA4C22108C9C00B71E22 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */; };
+		DFF79C032225460A00121461 /* KindDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF79C022225460A00121461 /* KindDetail.xib */; };
+		DFF79C052225478B00121461 /* KindDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF79C042225478B00121461 /* KindDetailView.swift */; };
 		DFF9F5E221ECF04900AB193F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFF9F5E121ECF04900AB193F /* GoogleService-Info.plist */; };
 		DFF9F5E621ED01EC00AB193F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF9F5E521ED01EC00AB193F /* LoginController.swift */; };
 /* End PBXBuildFile section */
@@ -70,9 +72,11 @@
 		DF7863C521E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalWork_JanyErtveldtUITests.swift; sourceTree = "<group>"; };
 		DF7863C721E7817C00FC53EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF97ACF02221B744003DC4A2 /* NoodnummersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoodnummersViewController.swift; sourceTree = "<group>"; };
-		DF9FC84D22182127005EE873 /* LocationSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSingleton.swift; sourceTree = "<group>"; };
 		DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaartViewController.swift; sourceTree = "<group>"; };
+		DFDD39C72237D08D00505B0D /* LocationSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationSingleton.swift; path = ../LocationSingleton.swift; sourceTree = "<group>"; };
 		DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
+		DFF79C022225460A00121461 /* KindDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KindDetail.xib; sourceTree = "<group>"; };
+		DFF79C042225478B00121461 /* KindDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindDetailView.swift; sourceTree = "<group>"; };
 		DFF9F5E121ECF04900AB193F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Documents/FINAL WORK/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DFF9F5E521ED01EC00AB193F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,13 +157,15 @@
 		DF7863A121E7817A00FC53EF /* FinalWork_JanyErtveldt */ = {
 			isa = PBXGroup;
 			children = (
+				DFDD39C72237D08D00505B0D /* LocationSingleton.swift */,
 				DF7863A221E7817A00FC53EF /* AppDelegate.swift */,
 				DF7863A421E7817A00FC53EF /* ViewController.swift */,
 				DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */,
 				DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */,
 				DFF9F5E521ED01EC00AB193F /* LoginController.swift */,
+				DFF79C022225460A00121461 /* KindDetail.xib */,
+				DFF79C042225478B00121461 /* KindDetailView.swift */,
 				DF1824F4221C6A950069BB2A /* Kind.swift */,
-				DF9FC84D22182127005EE873 /* LocationSingleton.swift */,
 				DF7863A621E7817A00FC53EF /* Main.storyboard */,
 				DF97ACF02221B744003DC4A2 /* NoodnummersViewController.swift */,
 				DF7863AC21E7817C00FC53EF /* Assets.xcassets */,
@@ -306,6 +312,7 @@
 				DFF9F5E221ECF04900AB193F /* GoogleService-Info.plist in Resources */,
 				DF7863AD21E7817C00FC53EF /* Assets.xcassets in Resources */,
 				DF7863A821E7817A00FC53EF /* Main.storyboard in Resources */,
+				DFF79C032225460A00121461 /* KindDetail.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,10 +435,11 @@
 				DFF9F5E621ED01EC00AB193F /* LoginController.swift in Sources */,
 				DFECCA4C22108C9C00B71E22 /* QRReaderViewController.swift in Sources */,
 				DF1824F5221C6A950069BB2A /* Kind.swift in Sources */,
-				DF9FC84E22182127005EE873 /* LocationSingleton.swift in Sources */,
+				DFDD39C82237D08D00505B0D /* LocationSingleton.swift in Sources */,
 				DF7863A521E7817A00FC53EF /* ViewController.swift in Sources */,
 				DFBB090E2212E3DB0091CC4D /* KaartViewController.swift in Sources */,
 				DF7863A321E7817A00FC53EF /* AppDelegate.swift in Sources */,
+				DFF79C052225478B00121461 /* KindDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
