@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Featureview" customModule="FinalWork_JanyErtveldt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="540"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cy6-Pp-PAz">
+                    <rect key="frame" x="23" y="44" width="275" height="395"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7f-Yi-l8f">
+                    <rect key="frame" x="23" y="44" width="275" height="395"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atf-UO-emn">
+                    <rect key="frame" x="-1" y="470" width="321" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="wDv-Rv-Z0d"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Start een route naar een instantie via de 'kaarten' app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyx-LS-yvH">
+                    <rect key="frame" x="23" y="493" width="275" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fyx-LS-yvH" secondAttribute="bottom" constant="3" id="2o3-zE-GgR"/>
+                <constraint firstItem="Cy6-Pp-PAz" firstAttribute="leading" secondItem="U7f-Yi-l8f" secondAttribute="leading" id="5Qt-CW-eq7"/>
+                <constraint firstItem="Cy6-Pp-PAz" firstAttribute="bottom" secondItem="U7f-Yi-l8f" secondAttribute="bottom" id="5zC-2c-DBS"/>
+                <constraint firstItem="U7f-Yi-l8f" firstAttribute="trailing" secondItem="Atf-UO-emn" secondAttribute="trailing" constant="-22" id="8bH-jV-JBt"/>
+                <constraint firstItem="fyx-LS-yvH" firstAttribute="trailing" secondItem="Atf-UO-emn" secondAttribute="trailing" constant="-22" id="J3D-fy-xOR"/>
+                <constraint firstAttribute="trailing" secondItem="U7f-Yi-l8f" secondAttribute="trailing" constant="22" id="JIr-YW-bDa"/>
+                <constraint firstItem="U7f-Yi-l8f" firstAttribute="leading" secondItem="Atf-UO-emn" secondAttribute="leading" constant="24" id="QQN-iS-Myb"/>
+                <constraint firstItem="U7f-Yi-l8f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="44" id="TwG-98-Uns"/>
+                <constraint firstItem="U7f-Yi-l8f" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VRe-6M-pti"/>
+                <constraint firstItem="Atf-UO-emn" firstAttribute="top" secondItem="U7f-Yi-l8f" secondAttribute="bottom" constant="31" id="VXN-3w-bmR"/>
+                <constraint firstItem="fyx-LS-yvH" firstAttribute="top" secondItem="Atf-UO-emn" secondAttribute="bottom" constant="5" id="cNm-8Z-Zb2"/>
+                <constraint firstItem="Cy6-Pp-PAz" firstAttribute="trailing" secondItem="U7f-Yi-l8f" secondAttribute="trailing" id="geC-t6-rso"/>
+                <constraint firstAttribute="bottom" secondItem="Atf-UO-emn" secondAttribute="bottom" constant="52" id="htx-X8-MwA"/>
+                <constraint firstItem="fyx-LS-yvH" firstAttribute="centerX" secondItem="Atf-UO-emn" secondAttribute="centerX" constant="1" id="yrj-vm-LcO"/>
+                <constraint firstItem="Cy6-Pp-PAz" firstAttribute="top" secondItem="U7f-Yi-l8f" secondAttribute="top" id="zvU-Br-IAk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="ShadowBoxView" destination="Cy6-Pp-PAz" id="66x-BA-OUZ"/>
+                <outlet property="imgTutorial" destination="U7f-Yi-l8f" id="YQK-4i-Wof"/>
+                <outlet property="lblSubtitle" destination="fyx-LS-yvH" id="pYx-gw-2sE"/>
+                <outlet property="lblTitle" destination="Atf-UO-emn" id="12S-4N-4FY"/>
+            </connections>
+            <point key="canvasLocation" x="-171.01449275362319" y="287.94642857142856"/>
+        </view>
+    </objects>
+</document>

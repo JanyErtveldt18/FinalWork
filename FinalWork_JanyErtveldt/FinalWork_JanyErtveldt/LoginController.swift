@@ -12,6 +12,8 @@ import Firebase
 import FirebaseDatabase
 import GeoFire
 import FirebaseFirestore
+import CoreData
+import CoreLocation
 
 class LoginController: UIViewController {
     
@@ -23,16 +25,15 @@ class LoginController: UIViewController {
     var alleVerdwaaldeKinderen = [Kind]()
     
     
+    let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    
     override func viewDidLoad(){
         super.viewDidLoad()
-        print("Viewdidload")
-        print(menuShowing)
         self.navigationController?.navigationBar.isHidden = false
         navigationItem.hidesBackButton = true
         self.profielImage.layer.cornerRadius = self.profielImage.frame.size.width / 2;
         
         self.haalAllesOpVanDatabase()
-        
     }
     
     func haalAllesOpVanDatabase(){
@@ -45,7 +46,6 @@ class LoginController: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for kinderen in querySnapshot!.documents {
-                    print("gepasseerd")
                     
                     let kindId  = kinderen.data()["Id"]!
                     let naamKind  = kinderen.data()["NaamKind"]!
@@ -56,9 +56,11 @@ class LoginController: UIViewController {
                     let relatie  = kinderen.data()["Relatie"]!
                     let leeftijd  = kinderen.data()["Leeftijd"]!
                     let url  = kinderen.data()["url"]!
+                    let laatst_gezien = kinderen.data()["laatst_gezien"]!
+                    let vermist_sinds = kinderen.data()["vermist_sinds"]!
                     //print("KindID voor ieder kind: ",kindId)
                     
-                    let kind = Kind(id: kindId as? String, naamOuder: naamOuder as? String, voornaamOuder: voornaamOuder as? String, relatie: relatie as? String, naamKind: naamKind as? String, voornaamKind: voornaamKind as? String, beschrijving: beschrijving as? String, leeftijd: leeftijd as? Int,url:url as? String)
+                    let kind = Kind(id: kindId as? String, naamOuder: naamOuder as? String, voornaamOuder: voornaamOuder as? String, relatie: relatie as? String, naamKind: naamKind as? String, voornaamKind: voornaamKind as? String, beschrijving: beschrijving as? String, leeftijd: leeftijd as? Int,url:url as? String, laatst_gezien: laatst_gezien as? String, vermist_sinds: vermist_sinds as? String)
                     self.alleVerdwaaldeKinderen.append(kind)
                 }
                 self.zetAllesOpDeHomepagina()
@@ -66,12 +68,49 @@ class LoginController: UIViewController {
         }
     }
     
+    func maakAllesLeegEerst(){
+        //Core data legen want anders blijven de kinderen iedere keer opslaan
+        var alleVerdwaaldeKinderenTest = [VerdwaaldKind]()
+        let stationFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "VerdwaaldKind")
+        do{
+            alleVerdwaaldeKinderenTest = try managedContext?.fetch(stationFetch) as! [VerdwaaldKind]
+
+            if (alleVerdwaaldeKinderenTest.count) > 0{
+                print("verwijder eerst alles")
+                for verdwaaldKind in alleVerdwaaldeKinderenTest{
+                    managedContext?.delete(verdwaaldKind)
+                    try! managedContext?.save()
+                }
+                
+            }else{
+                print("niets te verwijderen")
+            }
+
+        }catch{
+
+        }
+    }
+    
     func zetAllesOpDeHomepagina(){
-        print("test functie")
+        maakAllesLeegEerst()
+        print(alleVerdwaaldeKinderen.count)
         for(index,kind) in self.alleVerdwaaldeKinderen.enumerated() {
-//            print(index)
-//            print(kind.naamKind!)
-//            print(kind.beschrijving!)
+            let nieuweverdwaaldkind = NSEntityDescription.insertNewObject(forEntityName: "VerdwaaldKind", into: managedContext!)
+            nieuweverdwaaldkind.setValue(kind.naamKind!, forKey: "naamKind")
+            nieuweverdwaaldkind.setValue(kind.voornaamKind!, forKey: "voornaamKind")
+            nieuweverdwaaldkind.setValue(kind.leeftijd!, forKey: "leeftijd")
+            nieuweverdwaaldkind.setValue(kind.url, forKey: "url")
+            nieuweverdwaaldkind.setValue(kind.laatst_gezien, forKey: "laatst_gezien")
+            nieuweverdwaaldkind.setValue(kind.vermist_sinds, forKey: "vermist_sinds")
+            
+            do{
+                try managedContext?.save()
+                print("Het kind is saved")
+            }
+            catch{
+                fatalError("Failed to insert childs: \(error)")
+            }
+            
             if let kindLayoutView = Bundle.main.loadNibNamed("KindDetail", owner: self, options: nil)?.first as? KindDetailView {
                 
                 let storage = Storage.storage()
@@ -143,5 +182,6 @@ class LoginController: UIViewController {
         }
         menuShowing = !menuShowing
     }
+    
     
 }

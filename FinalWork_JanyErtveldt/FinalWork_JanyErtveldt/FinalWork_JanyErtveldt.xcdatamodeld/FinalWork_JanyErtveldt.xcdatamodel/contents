@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Politiekantoren" representedClassName="Politiekantoren" syncable="YES" codeGenerationType="class">
+        <attribute name="adres" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="VerdwaaldKind" representedClassName="VerdwaaldKind" syncable="YES" codeGenerationType="class">
+        <attribute name="beschrijving" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="laatst_gezien" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leeftijd" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="naamKind" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="naamOuder" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relatie" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="vermist_sinds" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="voornaamKind" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="voornaamOuder" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Politiekantoren" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="VerdwaaldKind" positionX="-63" positionY="9" width="128" height="210"/>
+    </elements>
 </model>

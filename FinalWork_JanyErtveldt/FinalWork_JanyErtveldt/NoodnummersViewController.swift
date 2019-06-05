@@ -24,21 +24,21 @@ class NoodnummersViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func MakeACallToPolitie(_ sender: Any) {
-        let url:NSURL = NSURL(string: "tel://0486107709")!
+        let url:NSURL = NSURL(string: "tel://101")!
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
     
     @IBAction func MakeACallToBrandweer(_ sender: Any) {
-        let url:NSURL = NSURL(string: "tel://0486107709")!
+        let url:NSURL = NSURL(string: "tel://112")!
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
     @IBAction func MakeACallToAlgemeen(_ sender: Any) {
-        let url:NSURL = NSURL(string: "tel://0486107709")!
+        let url:NSURL = NSURL(string: "tel://112")!
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
     
     @IBAction func MakeACallToChildFocus(_ sender: Any) {
-        let url:NSURL = NSURL(string: "tel://0486107709")!
+        let url:NSURL = NSURL(string: "tel://024754411")!
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
     

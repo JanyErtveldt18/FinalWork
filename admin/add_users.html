@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Final work | Admin</title>
+</head>
+<link rel="stylesheet" type="text/css" href="adminpaneel.css">
+
+<body>
+ <div class="navigatie_bar">
+   <h3>FIND YOUR CHILD</h3>
+   <h6>Hallo, admin</h6>
+   
+   <div class="navigatie">
+     <ul>
+       <li class="user_aanmaken">
+         <a href="add_users.html">User aanmaken</a>
+       </li>
+     </ul>
+   </div>
+   
+   <a href="index.html" class="logout">Uitloggen</a>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="content_gedeelte">
+   <h4>USER AANMAKEN</h4>
+   <h6>Alle gegevens worden opgeslagen in de database. Vraag dus zeker aan de persoon die een account wil of hij akkoord is met onze algemene voorwaarden i.v.m. het verwerken van zijn gegevens. </h6>
+   
+   <div class="form_gegevens">
+   <div class="name_ouders">
+    <h2>OUDER:</h2>
+     <hr>
+      <label>Voornaam ouder:</label>
+      <br>
+      <input type="text" name="firstname" id="firstname" value="greta">
+  
+      <br>
+      <label>Achternaam ouder:</label>
+      <br>
+      <input type="text" name="lastname" id="lastname" value="cornelis">
+
+    
+      <br>
+      <label>Gsm:</label>
+      <br>
+      <input type="text" name="gsm" id="gsm" value="0471066840">
+   
+   
+      <br>
+      <label>Adres:</label>
+      <br>
+      <input type="text" name="adress" id="adress" value="Hazelaarstraat 21">
+    
+      <br>
+      <label>Gemeente:</label>
+      <br>
+      <input type="text" name="gemeente" id="gemeente" value="Groot Bijgaarden">
+    
+      <br>
+      <label>Postcode:</label>
+      <br>
+      <input type="text" name="postcode" id="postcode" value="1702">
+      <br>
+    </div>
+    
+    <div class="name_kind">
+      <h2>KIND:</h2>
+      <hr>
+      <label>Voornaam kind:</label>
+      <br>
+      <input type="text" name="firstname_child" id="firstname_child" value="kind">
+      <br>
+      <label>Achternaam kind:</label>
+      <br>
+      <input type="text" name="lastname_child" id="lastname_child" value="bajnzb">
+      <br>
+      <label>Leeftijd kind:</label>
+      <br>
+      <input type="text" name="leeftijd_child" id="leeftijd_child" value="32">
+      <br>
+      <label>Beschrijving kind:</label>
+      <br>
+      <textarea type="text" name="beschrijving_child" id="beschrijving_child" value="fziabifibzajsqfvza">
+        Dit is een beschrijving van het kind moest het verdwalen dat we dit kunnen gebruiken om te verspreiden.
+      </textarea>
+      
+   </div>
+   
+   
+   <div class="account">
+    <h2>ACCOUNT:</h2>
+      <hr>
+
+      
+      <label>Email:</label>
+      <br>
+      <input type="text" name="email" id="email" value="greta.cornelis@telenet.be">
+      <label>Password:</label>
+      <br>
+      <input type="password" name="password" id="password" value="Voetbal22">
+      <br>
+      <label>QR-code:</label>
+      <br>
+      <input type="text" name="qr_code" id="qr_code" value="dV99Ick04z">
+
+      <button class="submit" type="submit" id="submit" onclick="createUserAccount()">USER AANMAKEN</button>
+      <br>
+   </div>
+  
+   
+    
+  </div>
+    
+    
+    
+    
+    
+    
+    
+    
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+  <script src="app.js">
+    // Initialize Firebase
+    
+    
+  </script>
+  
+  <script src="add_data.js"></script>
+</body>
+
+</html>

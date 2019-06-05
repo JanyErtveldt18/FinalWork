@@ -1,65 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <title>Final work | Admin</title>
+  <title>Final work | Login</title>
 </head>
-
+<link rel="stylesheet" type="text/css" href="index.css">
 <body>
-  <h1>Admin website</h1>
+ <header>
+    <h3>Welkom op het inlogscherm van Find Your Child</h3>
+    <p>Login om verder te gaan naar het adminpanel</p>
+  </header>
+  
+  <div class="midden">
+    <div class="login_form">
 
-    <br>First name:
-    <br>
-    <input type="text" name="firstname" id="firstname">
-    <br>
-    <br> Last name:
-    <br>
-    <input type="text" name="lastname" id="lastname">
-    <br>
-    <br>Email:
-    <br>
-    <input type="text" name="email" id="email">
-    <br>Password:
-    <br>
-    <input type="password" name="password" id="password">
-    <br>
-    <br>
-    
-    <button type="submit" id="submit" onclick="createUserAccount()">Create user</button>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-<!-- Firebase App is always required and must be first -->
-<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+          <br><label>E-mail:</label>
+          <br>
+          <input class="veld" type="text" name="email" id="email" placeholder="admin@test.be">
+          <br>
+          <br><label>Wachtwoord:</label>
+          <br>
+          <input class="veld" type="password" name="wachtwoord" id="wachtwoord" placeholder="test123">
+          <br>
+          <br>
+          <button type="submit" id="submit" class="submit" onclick="loginToAdminpaneel()">LOGIN</button>
+
+    </div>
+  </div>
+  
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
-  <script>
-    // Initialize Firebase
-    
-    var config = {
-      apiKey: "AIzaSyBSV_GNSMXFlfTitaI-mfwyP3huPbm0s2o"
-      , authDomain: "finalwork-janyertveldt.firebaseapp.com"
-      , databaseURL: "https://finalwork-janyertveldt.firebaseio.com"
-      , projectId: "finalwork-janyertveldt"
-      , storageBucket: "finalwork-janyertveldt.appspot.com"
-      , messagingSenderId: "394541088209"
-    };
-    firebase.initializeApp(config);
-    
-    var db = firebase.firestore();
-  </script>
-  
-  <script src="add_data.js"></script>
+  <script src="app.js"></script>
+  <script src="index.js"></script>
 </body>
-
 </html>

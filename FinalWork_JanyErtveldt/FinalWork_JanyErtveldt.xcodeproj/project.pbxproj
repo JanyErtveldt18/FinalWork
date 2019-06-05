@@ -11,6 +11,13 @@
 		CED262CBF3DDFAE03DFFD5FD /* Pods_FinalWork_JanyErtveldtUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF05040425D3BC2C2B712A76 /* Pods_FinalWork_JanyErtveldtUITests.framework */; };
 		D10EFF4986BFB5C864763878 /* Pods_FinalWork_JanyErtveldt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8513971DAA991F31CD77BCB7 /* Pods_FinalWork_JanyErtveldt.framework */; };
 		DF1824F5221C6A950069BB2A /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1824F4221C6A950069BB2A /* Kind.swift */; };
+		DF2182F22295CA9C009C99C8 /* Feature.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2182F12295CA9C009C99C8 /* Feature.xib */; };
+		DF2182F42295CB06009C99C8 /* Featureview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2182F32295CB06009C99C8 /* Featureview.swift */; };
+		DF2182F62295CC3A009C99C8 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2182F52295CC3A009C99C8 /* TutorialViewController.swift */; };
+		DF60CD482253723900C793DB /* LijstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF60CD472253723900C793DB /* LijstTableViewController.swift */; };
+		DF60CD4A225381A300C793DB /* Politiekantoor_Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF60CD49225381A300C793DB /* Politiekantoor_Annotation.swift */; };
+		DF60CD4C225386E300C793DB /* Politiekantoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF60CD4B225386E300C793DB /* Politiekantoor.swift */; };
+		DF60CD512253B6B200C793DB /* politiekantoren.txt in Resources */ = {isa = PBXBuildFile; fileRef = DF60CD4F2253ADB200C793DB /* politiekantoren.txt */; };
 		DF7863A321E7817A00FC53EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863A221E7817A00FC53EF /* AppDelegate.swift */; };
 		DF7863A521E7817A00FC53EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863A421E7817A00FC53EF /* ViewController.swift */; };
 		DF7863A821E7817A00FC53EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7863A621E7817A00FC53EF /* Main.storyboard */; };
@@ -19,8 +26,13 @@
 		DF7863B021E7817C00FC53EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7863AE21E7817C00FC53EF /* LaunchScreen.storyboard */; };
 		DF7863BB21E7817C00FC53EF /* FinalWork_JanyErtveldtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863BA21E7817C00FC53EF /* FinalWork_JanyErtveldtTests.swift */; };
 		DF7863C621E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7863C521E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift */; };
+		DF89B4822281A6AA008D8324 /* ProfielViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89B4812281A6AA008D8324 /* ProfielViewController.swift */; };
 		DF97ACF12221B744003DC4A2 /* NoodnummersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97ACF02221B744003DC4A2 /* NoodnummersViewController.swift */; };
 		DFBB090E2212E3DB0091CC4D /* KaartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */; };
+		DFC0AA57225CDD29006AE2C9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0AA56225CDD29006AE2C9 /* CustomTableViewCell.swift */; };
+		DFC0AA59225CEC44006AE2C9 /* DetailKindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0AA58225CEC44006AE2C9 /* DetailKindViewController.swift */; };
+		DFC6428922987BB100A8A683 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6428822987BB100A8A683 /* FilterTableViewController.swift */; };
+		DFC6428B2299A99C00A8A683 /* EditProfielViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6428A2299A99C00A8A683 /* EditProfielViewController.swift */; };
 		DFDD39C82237D08D00505B0D /* LocationSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD39C72237D08D00505B0D /* LocationSingleton.swift */; };
 		DFECCA4C22108C9C00B71E22 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */; };
 		DFF79C032225460A00121461 /* KindDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF79C022225460A00121461 /* KindDetail.xib */; };
@@ -57,6 +69,13 @@
 		DE843A2111A258B13EF3C764 /* Pods-FinalWork_JanyErtveldt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalWork_JanyErtveldt.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalWork_JanyErtveldt/Pods-FinalWork_JanyErtveldt.release.xcconfig"; sourceTree = "<group>"; };
 		DF05040425D3BC2C2B712A76 /* Pods_FinalWork_JanyErtveldtUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalWork_JanyErtveldtUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1824F4221C6A950069BB2A /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
+		DF2182F12295CA9C009C99C8 /* Feature.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Feature.xib; sourceTree = "<group>"; };
+		DF2182F32295CB06009C99C8 /* Featureview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Featureview.swift; sourceTree = "<group>"; };
+		DF2182F52295CC3A009C99C8 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		DF60CD472253723900C793DB /* LijstTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LijstTableViewController.swift; sourceTree = "<group>"; };
+		DF60CD49225381A300C793DB /* Politiekantoor_Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Politiekantoor_Annotation.swift; sourceTree = "<group>"; };
+		DF60CD4B225386E300C793DB /* Politiekantoor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Politiekantoor.swift; sourceTree = "<group>"; };
+		DF60CD4F2253ADB200C793DB /* politiekantoren.txt */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = text; path = politiekantoren.txt; sourceTree = "<group>"; tabWidth = 4; wrapsLines = 1; };
 		DF78639F21E7817A00FC53EF /* FinalWork_JanyErtveldt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalWork_JanyErtveldt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7863A221E7817A00FC53EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF7863A421E7817A00FC53EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,8 +90,13 @@
 		DF7863C121E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalWork_JanyErtveldtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7863C521E7817C00FC53EF /* FinalWork_JanyErtveldtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalWork_JanyErtveldtUITests.swift; sourceTree = "<group>"; };
 		DF7863C721E7817C00FC53EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF89B4812281A6AA008D8324 /* ProfielViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfielViewController.swift; sourceTree = "<group>"; };
 		DF97ACF02221B744003DC4A2 /* NoodnummersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoodnummersViewController.swift; sourceTree = "<group>"; };
 		DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaartViewController.swift; sourceTree = "<group>"; };
+		DFC0AA56225CDD29006AE2C9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = /Users/janyertveldt/FinalWork/FinalWork_JanyErtveldt/FinalWork_JanyErtveldt/CustomTableViewCell.swift; sourceTree = "<absolute>"; };
+		DFC0AA58225CEC44006AE2C9 /* DetailKindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKindViewController.swift; sourceTree = "<group>"; };
+		DFC6428822987BB100A8A683 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilterTableViewController.swift; path = /Users/janyertveldt/FinalWork/FinalWork_JanyErtveldt/FinalWork_JanyErtveldt/FilterTableViewController.swift; sourceTree = "<absolute>"; };
+		DFC6428A2299A99C00A8A683 /* EditProfielViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfielViewController.swift; sourceTree = "<group>"; };
 		DFDD39C72237D08D00505B0D /* LocationSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationSingleton.swift; path = ../LocationSingleton.swift; sourceTree = "<group>"; };
 		DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		DFF79C022225460A00121461 /* KindDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KindDetail.xib; sourceTree = "<group>"; };
@@ -157,17 +181,29 @@
 		DF7863A121E7817A00FC53EF /* FinalWork_JanyErtveldt */ = {
 			isa = PBXGroup;
 			children = (
+				DF60CD4F2253ADB200C793DB /* politiekantoren.txt */,
+				DFC6428822987BB100A8A683 /* FilterTableViewController.swift */,
+				DF60CD472253723900C793DB /* LijstTableViewController.swift */,
+				DF2182F12295CA9C009C99C8 /* Feature.xib */,
+				DF2182F32295CB06009C99C8 /* Featureview.swift */,
+				DF7863A621E7817A00FC53EF /* Main.storyboard */,
+				DFC6428A2299A99C00A8A683 /* EditProfielViewController.swift */,
+				DF2182F52295CC3A009C99C8 /* TutorialViewController.swift */,
+				DFC0AA56225CDD29006AE2C9 /* CustomTableViewCell.swift */,
 				DFDD39C72237D08D00505B0D /* LocationSingleton.swift */,
 				DF7863A221E7817A00FC53EF /* AppDelegate.swift */,
 				DF7863A421E7817A00FC53EF /* ViewController.swift */,
+				DFF9F5E521ED01EC00AB193F /* LoginController.swift */,
 				DFECCA4B22108C9C00B71E22 /* QRReaderViewController.swift */,
 				DFBB090D2212E3DB0091CC4D /* KaartViewController.swift */,
-				DFF9F5E521ED01EC00AB193F /* LoginController.swift */,
+				DF60CD4B225386E300C793DB /* Politiekantoor.swift */,
+				DF60CD49225381A300C793DB /* Politiekantoor_Annotation.swift */,
 				DFF79C022225460A00121461 /* KindDetail.xib */,
 				DFF79C042225478B00121461 /* KindDetailView.swift */,
 				DF1824F4221C6A950069BB2A /* Kind.swift */,
-				DF7863A621E7817A00FC53EF /* Main.storyboard */,
 				DF97ACF02221B744003DC4A2 /* NoodnummersViewController.swift */,
+				DF89B4812281A6AA008D8324 /* ProfielViewController.swift */,
+				DFC0AA58225CEC44006AE2C9 /* DetailKindViewController.swift */,
 				DF7863AC21E7817C00FC53EF /* Assets.xcassets */,
 				DF7863AE21E7817C00FC53EF /* LaunchScreen.storyboard */,
 				DF7863B121E7817C00FC53EF /* Info.plist */,
@@ -313,6 +349,8 @@
 				DF7863AD21E7817C00FC53EF /* Assets.xcassets in Resources */,
 				DF7863A821E7817A00FC53EF /* Main.storyboard in Resources */,
 				DFF79C032225460A00121461 /* KindDetail.xib in Resources */,
+				DF2182F22295CA9C009C99C8 /* Feature.xib in Resources */,
+				DF60CD512253B6B200C793DB /* politiekantoren.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,12 +472,22 @@
 				DF97ACF12221B744003DC4A2 /* NoodnummersViewController.swift in Sources */,
 				DFF9F5E621ED01EC00AB193F /* LoginController.swift in Sources */,
 				DFECCA4C22108C9C00B71E22 /* QRReaderViewController.swift in Sources */,
+				DFC6428B2299A99C00A8A683 /* EditProfielViewController.swift in Sources */,
+				DF2182F42295CB06009C99C8 /* Featureview.swift in Sources */,
 				DF1824F5221C6A950069BB2A /* Kind.swift in Sources */,
 				DFDD39C82237D08D00505B0D /* LocationSingleton.swift in Sources */,
+				DF89B4822281A6AA008D8324 /* ProfielViewController.swift in Sources */,
 				DF7863A521E7817A00FC53EF /* ViewController.swift in Sources */,
 				DFBB090E2212E3DB0091CC4D /* KaartViewController.swift in Sources */,
+				DF2182F62295CC3A009C99C8 /* TutorialViewController.swift in Sources */,
+				DFC6428922987BB100A8A683 /* FilterTableViewController.swift in Sources */,
+				DF60CD4A225381A300C793DB /* Politiekantoor_Annotation.swift in Sources */,
+				DFC0AA59225CEC44006AE2C9 /* DetailKindViewController.swift in Sources */,
+				DF60CD4C225386E300C793DB /* Politiekantoor.swift in Sources */,
+				DFC0AA57225CDD29006AE2C9 /* CustomTableViewCell.swift in Sources */,
 				DF7863A321E7817A00FC53EF /* AppDelegate.swift in Sources */,
 				DFF79C052225478B00121461 /* KindDetailView.swift in Sources */,
+				DF60CD482253723900C793DB /* LijstTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

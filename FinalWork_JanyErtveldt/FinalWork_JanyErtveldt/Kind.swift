@@ -18,8 +18,10 @@ class Kind {
     var relatie: String?
     var leeftijd: Int?
     var url: String?
+    var laatst_gezien: String?
+    var vermist_sinds: String?
     
-    init(id:String?, naamOuder: String?, voornaamOuder: String?,relatie: String?, naamKind: String?, voornaamKind: String?, beschrijving: String?,leeftijd: Int?,url: String?){
+    init(id:String?, naamOuder: String?, voornaamOuder: String?,relatie: String?, naamKind: String?, voornaamKind: String?, beschrijving: String?,leeftijd: Int?,url: String?,laatst_gezien:String?,vermist_sinds:String?){
         self.id = id
         self.voornaamOuder = voornaamOuder
         self.naamOuder = naamOuder
@@ -29,5 +31,7 @@ class Kind {
         self.relatie = relatie
         self.leeftijd = leeftijd
         self.url = url
+        self.laatst_gezien = laatst_gezien
+        self.vermist_sinds = vermist_sinds
     }
 }

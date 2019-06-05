@@ -11,6 +11,9 @@ import Foundation
 import AVFoundation
 import MapKit
 import MessageUI
+import Firebase
+import FirebaseDatabase
+import FirebaseFirestore
 
 class QRReaderViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate,MFMessageComposeViewControllerDelegate {
     @IBOutlet weak var ScanVierkant: UIImageView!
@@ -74,15 +77,31 @@ class QRReaderViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
                 let machineReadableCode = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
                 if object.type == AVMetadataObject.ObjectType.qr
                 {
-                    stringWaarde = machineReadableCode.stringValue!
+                   
+                    self.stringWaarde = machineReadableCode.stringValue!
+                    
+                    var dictionaryQRcodes = [] as [String]
+                    
+                    //Haal de QR-code waarde door de database
+                    //Haal van de juiste de Userid op
+                    //Door de database van users gaan en de juiste de gegevens ophalen
+                    //String variabelen maken voor GSM nummer en naam
+                    
+                    
+                    
+    
+                    
+                    
+                    
+                    
                     let alert = UIAlertController(title: "QR-code gescand", message: "Toon route naar ouders", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Scan opnieuw", style: .default, handler: nil))
                     
                     
-                    let openKaart = UIAlertAction(title: "Open route app", style: .default, handler: {(action) -> Void in
-                        //Waarde achter QR-code
-                        print(self.stringWaarde)
-                        
+//                    let openKaart = UIAlertAction(title: "Open map", style: .default, handler: {(action) -> Void in
+//                        //Waarde achter QR-code
+//                        print(self.stringWaarde)
+                    
                         //QR-code door database halen
                         //Degene die gelijk is gegevens ouders ophalen - locatie
                         //Bericht naar gsm nummer sturen - open applicatie voor locatie gebruik voor route
@@ -92,47 +111,54 @@ class QRReaderViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
                         
                         //opent app maps op iPhone dus gaat uit de applicatie
                         //Eindpunt locatie ouders
-                        let latitude: CLLocationDegrees = 50.872667
-                        let longitude: CLLocationDegrees = 4.248144
-
-                        let regionDistance: CLLocationDistance = 1000
-                        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
-                        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
-
-                        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),MKLaunchOptionsMapSpanKey:NSValue(mkCoordinateSpan: regionSpan.span)]
-
-                        let placemark = MKPlacemark(coordinate: coordinates)
-                        let mapItem = MKMapItem(placemark: placemark)
-                        mapItem.name = "Locatie ouders"
-                        mapItem.openInMaps(launchOptions: options)
-                        
-                        
-                        
+//                        let latitude: CLLocationDegrees = 50.872667
+//                        let longitude: CLLocationDegrees = 4.248144
+//                        let regionDistance: CLLocationDistance = 1000
+//                        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+//                        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+//                        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),MKLaunchOptionsMapSpanKey:NSValue(mkCoordinateSpan: regionSpan.span)]
+//                        let placemark = MKPlacemark(coordinate: coordinates)
+//                        let mapItem = MKMapItem(placemark: placemark)
+//                        mapItem.name = "Locatie ouders"
+//                        mapItem.openInMaps(launchOptions: options)
                         //self.present(KaartViewController, animated: true, completion: nil)
-                    })
-                    alert.addAction(openKaart)
+//                    })
+//                    alert.addAction(openKaart)
                     
-                    let belOudersVerdwaaldKind = UIAlertAction(title: "BEL OUDERS", style: .default, handler: {(action) -> Void in
+                    let belOudersVerdwaaldKind = UIAlertAction(title: "SMS ouders", style: .default, handler: {(action) -> Void in
                         print("Bel GSM-nummer ouders")
-                        //GSM nummer nog ophalen uit firebase db
 //                        let url:NSURL = NSURL(string: "tel://0486107709")!
 //                        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+                        var gsm_ouders = String()
                         
-                        
-                        //SMS sturen naar nummer
-                        let messageVC = MFMessageComposeViewController()
-                        
-                        messageVC.body = "Hello, I found your child. Can you please go to the ...... app, so I can locate you on the map and start a route to you.";
-                        messageVC.recipients = ["0471066840"]
-                        messageVC.messageComposeDelegate = self
-                        
-                        self.present(messageVC, animated: true, completion: nil)
+                        let db = Firestore.firestore()
+                        let settings = db.settings
+                        settings.areTimestampsInSnapshotsEnabled = true
+                        db.settings = settings
+                        db.collection("Users").whereField("qrcode", isEqualTo: self.stringWaarde).getDocuments() { (querySnapshot, err) in
+                            if let err = err {
+                                print("Error getting documents: \(err)")
+                            } else {
+                                for qrcode in querySnapshot!.documents {
+                                    if let name = qrcode.data()["name"] as? String{
+                                            if let gsm = qrcode.data()["gsm"] as? String{
+                                                print(name, gsm)
+                                                //SMS sturen naar nummer
+                                                let messageVC = MFMessageComposeViewController()
+                                                
+                                                messageVC.body = "Hallo \(name), ik heb uw kindje gevonden via de applicatie 'FIND YOUR CHILD'. Nu kunnen we via hier sturen en bellen om af te spreken.";
+                                                messageVC.recipients = [gsm]
+                                                messageVC.messageComposeDelegate = self
+                                                
+                                                self.present(messageVC, animated: true, completion: nil)
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     })
                     alert.addAction(belOudersVerdwaaldKind)
-                    
-                    present(alert,animated: true,completion: nil)
-                 
-                    print(stringWaarde)
+                    self.present(alert,animated: true,completion: nil)
                 }
             }
         }

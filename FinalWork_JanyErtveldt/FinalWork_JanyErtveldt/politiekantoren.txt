@@ -1,0 +1,26 @@
+[
+{
+"id":1,
+"naam":"Reddingspost Treintje",
+"latitude":51.172214,
+"longitude":2.776726,
+"adres":"Treintje",
+"icon":"Treintje"
+},
+{
+"id":2,
+"naam":"Reddingspost Bal",
+"latitude":51.174811,
+"longitude":2.782131,
+"adres":"Bal",
+"icon":"Bal"
+},
+{
+"id":3,
+"naam":"Wijkcommissariaat Groot Bijgaarden",
+"latitude":50.872667,
+"longitude":4.265570,
+"adres":"Isidoor Van Beverenlaan 12",
+"icon":"Politie"
+}
+]

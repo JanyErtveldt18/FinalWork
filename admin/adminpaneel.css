@@ -1,0 +1,148 @@
+html{
+  font-family: roboto;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(238,239,242);
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+/*---NAVIGATIE BAR---*/
+.navigatie_bar{
+  width: 20%;
+  float: left;
+  margin: 0 0 0 0;
+  padding: 0;
+  height: 815px;
+}
+
+.navigatie_bar h3{
+  margin: 5% 0 0 5%;
+  padding: 0;
+}
+.navigatie_bar h6{
+  margin: 0% 0 0 5%;
+  font-weight: 100;
+}
+
+.navigatie{
+  margin: 20% 0 0 0; 
+}
+
+.navigatie a {
+  text-decoration: none;
+  color: black;
+}
+.navigatie ul{
+  margin: 0;
+  padding: 0;
+}
+
+.navigatie ul .user_aanmaken{
+  list-style-type: none;
+  margin: 0;
+  padding: 6%;
+  background-color: rgb(197,199,205);
+  font-weight: 100;
+}
+
+.logout{
+  position: absolute;
+  bottom: 3%;
+  left: 1%;
+  color: black;
+  font-weight: 100;
+  font-size: 0.75em;
+}
+
+/*-----CONTENT GEDEELTE-----*/
+.content_gedeelte{
+  width: 80%;
+  float: left;
+  height: 815px;
+  background-color: white;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.content_gedeelte h4{
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.content_gedeelte h6{
+  margin: 0;
+  font-weight: 100;
+  font-size: 1em;
+  width: 70%
+}
+
+.form_gegevens label{
+  font-weight: 500;
+}
+
+.form_gegevens .name_ouders{
+  margin: 2% 5% 0 0;
+  width: 30%;
+  float: left;
+}
+
+.form_gegevens .name_ouders h2, .name_kind h2, .account h2{
+  margin: 0
+}
+
+.form_gegevens .name_kind{
+  margin: 2% 5% 0 0;
+  width: 30%;
+  float: left;
+}
+
+.form_gegevens .account{
+  margin: 2% 0 0 0;
+  width: 30%;
+  float: left;
+}
+
+.form_gegevens input,.form_gegevens textarea{
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 7px;
+  text-align: center;
+  background-color: rgb(243,244,246);
+  font-weight: 200;
+  font-size: .9em;
+  margin: 0 0 7% 0;
+}
+
+.form_gegevens textarea{
+  height: 150px;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 150px;
+  max-height: 150px;
+}
+
+.account .submit{
+  margin: 1% 0 0 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+  background-color: rgb(77,80,94);
+  border-radius: 7px;
+  cursor: pointer;
+  -webkit-box-shadow: 6px 7px 5px 0px rgba(0,0,0,0.10);
+  -moz-box-shadow: 6px 7px 5px 0px rgba(0,0,0,0.10);
+  box-shadow: 6px 7px 5px 0px rgba(0,0,0,0.10);
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.account .submit:hover{
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+}
+
+

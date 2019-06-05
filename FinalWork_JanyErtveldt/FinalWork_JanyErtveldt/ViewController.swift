@@ -61,7 +61,6 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     
     func loginUser(){
-        print("Stuur user door naar homescreen")
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfielViewControllerID") as! UITabBarController
         self.present(vc, animated: true, completion: nil)
     }
